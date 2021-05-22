@@ -9,6 +9,9 @@ body {
     font-family: sans-serif;
     font-size: 1em;
 }
+h2, h3, p{
+    padding: 0.5em 0.75rem;
+}
 
 :root {
     --bleed-content: 0.5em 0.75rem;
@@ -21,10 +24,13 @@ body {
 @media (prefers-color-scheme: light) {
     .contaner {
         --bg: whitesmoke;
+        
     }
 
     .header {
         --bg: transparent;
+        
+        
     }
 
     .headerbar {
@@ -47,32 +53,41 @@ body {
     }
 
     .main {
-        background-color: yellow;
+        background-color: lightgray;
     }
 
     .article-wrapper {
-        background-color: rgb(45, 45, 68);
+        background-color: transparent;
+        
     }
 
-    .article-wrapper>div {
-        background-color: rgb(67, 89, 147);
+    .article {
+        background-color: transparent;
+        border: 1px solid darkgray;
+        box-shadow:
+       inset 0 -3em 3em rgba(0,0,0,0.1),
+             0.3em 0.3em 1em rgba(0,0,0,0.3);
+    }
+    .article h3 {
+        background-color: crimson;
+        color: whitesmoke;
     }
 
     .aside {
-        background-color: crimson;
+        background-color: transparent;
+        
     }
 
     .aside>div {
         background-color: gold;
+        
     }
 
     .footer {
-        background-color: #444;
+        background-color: lightgray
     }
 
-    .footer-section {
-        background-color: gold;
-    }
+    
 }
 
 /* Modo Tablet PC */
@@ -85,6 +100,7 @@ body {
         display: flex;
         flex-direction: column;
         gap: var(--gap);
+        max-width:85rem;
     }
 
     /* Header e hijos */
@@ -193,7 +209,6 @@ body {
 
     .main {
         display: flex;
-
         gap: var(--gap);
         padding: var(--bleed-container);
     }
@@ -206,16 +221,29 @@ body {
         flex-wrap: wrap;
     }
 
-    .article-wrapper>div {
+    .article-wrapper .article {
         min-height: var(--height);
         flex-grow: 1;
         flex-basis: 40%;
+
+        overflow: hidden;
+    }
+    .article {
+        display: flex;
+        flex-direction: column;
+        
+    }
+    .article img {
+        object-fit: cover;
+        height: 10rem;
+        
+
     }
 
-    .article-wrapper>div:last-child {
+    .article:last-child {
         flex-grow: 2;
         flex-basis: 100%;
-        background-color: rgb(113, 144, 164);
+        
     }
 
     .aside {
@@ -258,7 +286,7 @@ body {
 
 @media (max-width: 40rem) {
     .container {
-        width: 25rem;
+        width: 24rem;
     }
 
     .header {
@@ -281,7 +309,7 @@ body {
 
         display: flex;
         flex-direction: column;
-
+        
     }
 
     .navbar a {
@@ -291,10 +319,6 @@ body {
         border-radius: 0.5rem;
         justify-content: stretch;
 
-    }
-
-    small {
-        font-size: 0.8em;
     }
 
     .headerbar .logo {
@@ -317,12 +341,19 @@ body {
 
     .article-wrapper {
         display: flex;
-
+        flex-direction: column;
     }
 
-    .article-wrapper>div {
-        flex-grow: 1;
-        flex-basis: 100%;
+    .article-wrapper{
+        padding: 0;
+        display: flex;
+        align-content: center;
     }
-
+    .article{
+        flex: 1;
+        display: flex;
+        width: 18rem;
+        
+    }
+    
 }
