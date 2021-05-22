@@ -31,8 +31,10 @@ body {
         background-color: transparent;
     }
 
-    .logo, .navbar, .social {
-        background-color: transparent;
+    .navbar,
+    .social,
+    .logo {
+        --bg: transparent;
     }
 
     .destacados {
@@ -75,7 +77,7 @@ body {
 /* Modo Tablet PC */
 @media screen {
     .container {
-        min-height: 100vh;        
+        min-height: 100vh;
         margin: 0 auto;
         padding: var(--bleed-container);
         display: flex;
@@ -90,31 +92,35 @@ body {
         padding: var(--bleed-container);
         gap: var(--gap);
         background-image: url(../images/cabecera.jpg);
-        background-repeat: no-repeat;
-        background-position: center 50% ; /* x y */
-        background-size: cover; /* syntax: width height */
+        background-position: center 50%;
+        /* x y */
+        background-size: cover;
+        /* syntax: width height */
     }
 
     .headerbar {
-        
         display: flex;
         padding: var(--bleed-container);
         gap: var(--gap);
     }
-    
+
     .headerbar .logo {
+        background-color: var(--bg);
         min-height: var(--height);
         height: 3rem;
         width: 3rem;
-        
+
     }
 
     .headerbar .navbar {
+        background-color: var(--bg);
         min-height: var(--height);
         flex-grow: 2;
         max-height: 3rem;
     }
+
     .headerbar .social {
+        background-color: var(--bg);
         min-height: var(--height);
         flex-grow: 1;
         max-height: 3rem;
@@ -122,26 +128,28 @@ body {
 
     .navbar {
         display: flex;
-        place-content: center;
-        place-items: center;
         gap: var(--gap);
         padding: var(--bleed-container);
     }
+
     .navbar img {
-        height: 1.5rem;
+        height: 1.2rem;
     }
+
     .navbar a {
         text-decoration: none;
         color: #9b9292;
-        filter: grayscale(1);
         display: flex;
         align-items: center;
         gap: 0 0.5rem;
     }
-    .navbar a:hover{
+
+    .navbar a:hover {
         filter: grayscale(0);
         color: firebrick;
     }
+
+
     .destacados {
         display: flex;
         padding: var(--bleed-container);
@@ -192,7 +200,7 @@ body {
 
     .aside>div {
         min-height: var(--height);
-        
+
     }
 
     /* Estílos Bloque 1 Footer e hijos */
@@ -214,15 +222,21 @@ body {
         display: flex;
         flex-direction: column;
     }
-    
+
 }
 
 /* Vista móvil */
 
 @media (max-width: 40rem) {
-    .container{
+    .container {
         width: 22rem;
     }
+
+    .header {
+        background-position: center top;
+
+    }
+
     .headerbar {
         display: flex;
         flex-direction: column;
@@ -233,29 +247,39 @@ body {
         flex-grow: 1;
         flex-direction: column;
     }
+
+    .navbar a {
+        color: whitesmoke;
+        flex: 1;
+        /*no queda igualado */
+        background-color: tomato;
+        filter: grayscale(0);
+    }
+
     .headerbar .logo {
-        
-        
+
+
         align-self: center;
-        
+
     }
 
     .headerbar .navbar {
         max-height: max-content;
     }
+
     .headerbar .social {
-       
+
         max-height: auto;
     }
 
-    .article-wrapper{
+    .article-wrapper {
         display: flex;
-        
+
     }
-    .article-wrapper>div{
+
+    .article-wrapper>div {
         flex-grow: 1;
         flex-basis: 100%;
     }
 
 }
-
