@@ -35,11 +35,11 @@ body {
         background-color: rgba(199, 71, 71, 0.233);
     }
 
-    .navbar {
+    .destacados {
         background-color: rgba(255, 123, 0, 0.185);
     }
 
-    .navbar>span {
+    .destacados>span {
         background-color: rgba(230, 220, 104, 0.466);
     }
 
@@ -110,12 +110,12 @@ body {
         flex-grow: 2;
     }
 
-    .navbar {
+    .destacados {
         display: flex;
         padding: var(--bleed-container);
     }
 
-    .navbar>span {
+    .destacados>span {
         flex-grow: 1;
         min-height: var(--height);
     }
