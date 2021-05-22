@@ -103,7 +103,8 @@ body {
     
     .headerbar .logo {
         min-height: var(--height);
-        flex-grow: 1;
+        max-height: 3rem;
+        
     }
 
     .headerbar .navbar {
