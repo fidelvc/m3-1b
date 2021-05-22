@@ -37,11 +37,11 @@ body {
         --bg: transparent;
     }
 
-    .destacados {
+    .slogan {
         background-color: rgba(0, 0, 0, 0.2);
     }
 
-    .destacados>span {
+    .slogan>span {
         
         color: rgba(255, 99, 71, 0.575);
     }
@@ -167,12 +167,12 @@ body {
         height: 1.2rem;
     }
 
-    .destacados {
+    .slogan {
         display: flex;
         padding: var(--bleed-container);
     }
 
-    .destacados>span {
+    .slogan>span {
         flex-grow: 1;
         min-height: var(--height);
         font-family: serif;
