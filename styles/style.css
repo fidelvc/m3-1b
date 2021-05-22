@@ -38,11 +38,12 @@ body {
     }
 
     .destacados {
-        background-color: rgba(255, 123, 0, 0.185);
+        background-color: rgba(0, 0, 0, 0.2);
     }
 
     .destacados>span {
-        background-color: rgba(230, 220, 104, 0.466);
+        
+        color: rgba(255, 99, 71, 0.575);
     }
 
     .main {
@@ -128,6 +129,7 @@ body {
         max-height: 3rem;
     }
 
+
     .navbar {
         display: flex;
         gap: var(--gap);
@@ -154,6 +156,16 @@ body {
         color: #444;
     }
 
+    .social{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        gap: var(--gap);
+    }
+
+    .social img{
+        height: 1.2rem;
+    }
 
     .destacados {
         display: flex;
@@ -163,6 +175,10 @@ body {
     .destacados>span {
         flex-grow: 1;
         min-height: var(--height);
+        font-family: serif;
+        font-weight: bold;
+        font-size: 1.5rem;
+        text-align: center;
     }
 
     /* Estílos Bloque 2 Main e hijos */
@@ -283,6 +299,10 @@ body {
 
     .headerbar .social {
         flex: 1;
+    }
+
+    .social {
+        flex-direction: row;
     }
 
     .article-wrapper {
