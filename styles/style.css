@@ -20,11 +20,11 @@ body {
 
 @media (prefers-color-scheme: light) {
     .contaner {
-        background-color: whitesmoke;
+        --bg: whitesmoke;
     }
 
     .header {
-        background-color: black;
+        --bg: rgba(66, 62, 66, 0.836);
     }
 
     .headerbar {
@@ -77,9 +77,10 @@ body {
 /* Modo Tablet PC */
 @media screen {
     .container {
+        background-color: var(--bg);
         min-height: 100vh;
-        margin: 0 auto;
         padding: var(--bleed-container);
+        margin: 0 auto;
         display: flex;
         flex-direction: column;
         gap: var(--gap);
@@ -117,6 +118,7 @@ body {
         min-height: var(--height);
         flex-grow: 2;
         max-height: 3rem;
+        gap: var(--gap);
     }
 
     .headerbar .social {
@@ -130,6 +132,8 @@ body {
         display: flex;
         gap: var(--gap);
         padding: var(--bleed-container);
+        justify-content: center;
+        justify-items: center;
     }
 
     .navbar img {
@@ -140,13 +144,14 @@ body {
         text-decoration: none;
         color: #9b9292;
         display: flex;
-        align-items: center;
+        justify-content: center;
         gap: 0 0.5rem;
+        
     }
 
     .navbar a:hover {
-        filter: grayscale(0);
-        color: firebrick;
+        background-color: whitesmoke;
+        color: #444;
     }
 
 
@@ -229,47 +234,55 @@ body {
 
 @media (max-width: 40rem) {
     .container {
-        width: 22rem;
+        width: 25rem;
     }
 
     .header {
-        background-position: center top;
+        background-color: var(--bg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        max-height:fit-content;
 
     }
 
     .headerbar {
         display: flex;
         flex-direction: column;
+        align-items: center;
+        
     }
-
     .navbar {
+        
         display: flex;
-        flex-grow: 1;
         flex-direction: column;
+        
     }
 
     .navbar a {
         color: whitesmoke;
-        flex: 1;
-        /*no queda igualado */
-        background-color: tomato;
-        filter: grayscale(0);
+        background-color: rgba(101, 100, 99, 0.582);
+        padding: var(--bleed-content);
+        border-radius: 0.5rem;
+        justify-content: stretch;
+        
+    }
+    small {
+        font-size: 0.8em;
     }
 
     .headerbar .logo {
-
-
         align-self: center;
 
     }
 
     .headerbar .navbar {
         max-height: max-content;
+        
     }
 
     .headerbar .social {
-
-        max-height: auto;
+        flex: 1;
     }
 
     .article-wrapper {
