@@ -24,7 +24,7 @@ body {
     }
 
     .header {
-        --bg: rgba(66, 62, 66, 0.836);
+        --bg: transparent;
     }
 
     .headerbar {
@@ -42,7 +42,7 @@ body {
     }
 
     .slogan>span {
-        
+
         color: rgba(255, 99, 71, 0.575);
     }
 
@@ -94,10 +94,11 @@ body {
         padding: var(--bleed-container);
         gap: var(--gap);
         background-image: url(../images/cabecera.jpg);
-        background-position: center 50%;
+        background-position: center center;
         /* x y */
         background-size: cover;
         /* syntax: width height */
+        overflow: hidden;
     }
 
     .headerbar {
@@ -148,22 +149,29 @@ body {
         display: flex;
         justify-content: center;
         gap: 0 0.5rem;
-        
+        filter: grayscale(1);
     }
 
     .navbar a:hover {
         background-color: whitesmoke;
         color: #444;
+        filter: grayscale(0);
     }
 
-    .social{
+    .social {
         display: flex;
         flex-direction: column;
         justify-content: space-around;
         gap: var(--gap);
+        
     }
-
-    .social img{
+    .social a{
+        filter: grayscale(1);
+    }
+    .social a:hover{
+        filter: grayscale(0);
+    }
+    .social img {
         height: 1.2rem;
     }
 
@@ -258,7 +266,7 @@ body {
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
-        max-height:fit-content;
+        max-height: fit-content;
 
     }
 
@@ -266,13 +274,14 @@ body {
         display: flex;
         flex-direction: column;
         align-items: center;
-        
+
     }
+
     .navbar {
-        
+
         display: flex;
         flex-direction: column;
-        
+
     }
 
     .navbar a {
@@ -281,8 +290,9 @@ body {
         padding: var(--bleed-content);
         border-radius: 0.5rem;
         justify-content: stretch;
-        
+
     }
+
     small {
         font-size: 0.8em;
     }
@@ -294,7 +304,7 @@ body {
 
     .headerbar .navbar {
         max-height: max-content;
-        
+
     }
 
     .headerbar .social {
