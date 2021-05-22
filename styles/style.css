@@ -31,7 +31,7 @@ body {
         background-color: rgba(45, 45, 68, 0.205);
     }
 
-    .headerbar>div {
+    .logo, .navbar, .social {
         background-color: rgba(199, 71, 71, 0.233);
     }
 
@@ -100,14 +100,19 @@ body {
         padding: var(--bleed-container);
         gap: var(--gap);
     }
-
-    .headerbar>div {
+    
+    .headerbar .logo {
         min-height: var(--height);
         flex-grow: 1;
     }
 
-    .headerbar>div:nth-child(2) {
+    .headerbar .navbar {
+        min-height: var(--height);
         flex-grow: 2;
+    }
+    .headerbar .social {
+        min-height: var(--height);
+        flex-grow: 1;
     }
 
     .destacados {
