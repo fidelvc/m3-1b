@@ -121,6 +121,7 @@ h2, h3, p{
         display: flex;
         padding: var(--bleed-container);
         gap: var(--gap);
+        
     }
 
     .headerbar .logo {
@@ -140,10 +141,12 @@ h2, h3, p{
     }
 
     .headerbar .social {
+        
         background-color: var(--bg);
         min-height: var(--height);
-        flex-grow: 1;
+        
         max-height: 3rem;
+        
     }
 
 
